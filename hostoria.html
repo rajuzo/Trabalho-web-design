@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Murilo, Guilherme, Sarah, Rafael, Maria">
+    <meta name="description" content="Trabalho de web Designer tema: Site empresarial. Site sobre uma corretora de imóveis chamada HomeFy">
+    <meta name="keywords" content="web, fundamentos, www, html">
+    <meta name="reply-to" content="xxx@yyyy.com.br">
+    <title>Homefy - Sua Imobiliária dos Sonhos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: white;
+            line-height: 1.6;
+        }
+        .header {
+            background: #012951;
+            color: white;
+            padding: 20px;
+            text-align: center;
+          
+        }.dropdownimg {
+            background-color: black;
+            margin-left: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown {
+            background-color: black;
+
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            margin-left: 0;
+            box-shadow: 0px 8px 16px 0px rgba(3, 3, 3, 0.4);
+        }
+        .dropdown-content a{
+            display: inline-block;
+            padding: 10px 15px;
+            margin-left: 15px;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .dropdown-content a:hover{
+            color:black;
+            background-color: lightgrey;
+        }
+        .dropdownimg:hover .dropdown-content {
+            display: block;
+        }
+        .main {
+            padding: 20px;
+            background: white;
+            max-width: max-content;
+            margin: auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .main img{
+            text-align: center;
+        }
+        .footer {
+            background: #012951; 
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        h2, h1 {
+            margin-top: 20px;
+            color: #003366;
+            border-bottom: 2px solid #003366; 
+            padding-bottom: 0; 
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #083a6c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #1e8bff; 
+        }
+        .slideshow{
+            height: 500px;
+            width: 900px;
+            border-radius:20px;
+            overflow: hidden;
+            position: absolute;
+            top: 715px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .navigation{
+            position: absolute;
+            bottom:20px;
+            left: 50%;
+            transform: translate(-50%);
+            display: flex;
+        }
+        .botao{
+            width:70px;
+            height:17px;
+            border: 2px solid white;
+            margin:6px;
+            border-radius:5px;
+            cursor:pointer;
+            transition: .3s;
+        }
+        .botao:hover{
+            background-color: white;
+        }
+        input{
+            display: none;
+        }
+        .fotos{
+            display: flex;
+            width: 500%;
+            height: 100%;
+        }
+        .slide{
+            width: 20%;
+            transition: .6s;
+        }
+        .slide img{
+            width:100%;
+            height: 100%;
+        }
+        #slide1:checked ~ .s1 {
+            margin-left: 0%;
+        }
+        #slide2:checked ~ .s1 {
+            margin-left: -20%;
+        }
+        #slide3:checked ~ .s1 {
+            margin-left: -40%;
+        }
+        #slide4:checked ~ .s1 {
+            margin-left: -60%;
+        }
+        #slide5:checked ~ .s1 {
+            margin-left: -80%;
+        }
+        .Principal{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header" background-color="black">
+    <img src="logo.png">
+</div>
+
+<div class="dropdown">
+    <div class="dropdownimg">
+        <img src="menu.png">
+        <div class="dropdown-content">
+            <a href="index.html">Principal</a>
+            <a href="historia.html">História</a>
+            <a href="qsomos.html">Quem Somos</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="contatos.html">Contato</a>
+        </div>
+    </div>
+</div>
+<h1 class="Principal">Nossos imóveis</h1>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div class="slideshow">
+    <div class="fotos">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <input type="radio" name="slide" id="slide5">
+        <div class="slide s1">
+            <img src="int3.png" alt="img">
+        </div>
+        <div class="slide">
+            <img src="casa1.png" alt="img">
+        </div>
+        <div class="slide">
+            <img src="int2.png" alt="img">
+        </div>
+        <div class="slide">
+            <img src="casa6.png" alt="img">
+        </div>
+        <div class="slide">
+            <img src="casa5.png" alt="img">
+        </div>
+    </div>
+    <div class="navigation">
+        <label class="botao" for="slide1"></label>
+        <label class="botao" for="slide2"></label>
+        <label class="botao" for="slide3"></label>
+        <label class="botao" for="slide4"></label>
+        <label class="botao" for="slide5"></label>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<div class="main">
+    <h1 id="principal">Um Pouco da Nossa História</h1>
+    <ul>
+        <li><h2>Ano e como surgiu</h2>
+        <p>
+            A Homefy nasceu em 2013, surgindo da união de um grupo de amigos apaixonados pelo setor imobiliário e com uma visão comum: transformar a experiência de comprar e alugar imóveis, tornando-a mais humana, transparente e acessível para todos. A ideia surgiu em uma conversa entre nós, onde percebemos que o mercado necessitava de uma abordagem mais próxima, que compreendesse as necessidades, sonhos das pessoas e que atendessem o pedido de cada uma de forma mais eficiente possível. Foi assim que decidimos criar a Homefy, uma empresa que não só conecta pessoas aos imóveis dos seus sonhos, mas também trabalha para simplificar o processo e garantir que cada transação seja realizada com sucesso, confiança e de forma rápida.
+
+        </p>
+        </li>
+        <li><h2>Superação e Desafios Enfrentados</h2>
+            <p>
+                Como toda grande história tanto de empresa quanto de outras áreas, a trajetória da Homefy não foi nada fácil. Os primeiros anos trouxeram muitos desafios para nós, desde a construção de uma infraestrutura sólida até a conquista de um espaço em um mercado extremamente competitivo. Mas, com determinação e trabalho árduo, a Homefy foi superando cada obstáculo, sempre focada em seu propósito de oferecer um serviço de excelência e diferenciado. A empresa cresceu ao lado de seus clientes, adaptando-se ao mercado e investindo em tecnologia para otimizar processos, melhorar o atendimento e em realizar os sonhos das pessoas.
+            </p>
+        </li>
+        <li><h2>Campeã em Vendas e Premiações de Excelência</h2>
+            <p>
+                A dedicação e o compromisso da Homefy logo foram reconhecidos, recebendo em 2015, 2021 até o ano de 2024 premiações  por excelência em atendimento, inovação e volume de vendas e tudo isso são um reflexo direto do empenho da equipe e da confiança depositada por nossos clientes. Essas conquistas consolidaram a Homefy como uma das empresas em destaque no mercado imobiliário.
+            </p>
+        </li>
+        
+
+    </ul>
+    <img src="lt.png">
+</div>
+
+<div class="footer">
+    <p>&copy; 2013 Homefy. Todos os direitos reservados.</p>
+</div>
+
+</body>
+</html>
